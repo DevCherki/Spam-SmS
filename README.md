@@ -1,4 +1,6 @@
-# Spam-SmS
-Spam-SMS Tool هو أداة Python تم تطويرها بواسطة Dev Cherki لإرسال رسائل نصية جماعية إلى أرقام هواتف محددة من ملف نصي باستخدام واجهة Termux API. يمكنك استخدامها لإرسال رسائل نصية لأغراض تعليمية أو تجريبية فقط.
+# Spam-SMS Tool
+Spam-SMS Tool is a Python tool developed by Dev Cherki to send bulk SMS messages to specific phone numbers from a text file using the Termux API. You can use it to send SMS for educational or experimental purposes only.
 
-مميزات الأداة:إرسال رسائل نصية متعددة للأرقام المضافة في ملف data.txt.تخصيص محتوى الرسالة.
+Features:Send multiple SMS messages to numbers added in the data.txt file.Customize the message content.Repository Structure:
+
+
