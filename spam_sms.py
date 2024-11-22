@@ -19,10 +19,7 @@ def show_interface():
     ''')
 
 # إرسال الرسائل النصية عبر Termux API
-def send_sms():
-    # تحديد مسار ملف الأرقام
-    file_path = "/sdcard/Download/data.txt"
-
+def send_sms(file_path, message):
     try:
         # قراءة الأرقام من الملف
         with open(file_path, "r") as file:
@@ -32,8 +29,7 @@ def send_sms():
         for number in numbers:
             number = number.strip()  # إزالة المسافات البيضاء
             if number:  # التأكد من أن الرقم غير فارغ
-                # تضمين اسم الأداة في بداية الرسالة
-                message = "Spam-SMS Tool: مرحبًا، هذه رسالة تجريبية مرسلة من Python عبر Termux API."
+                # إرسال الرسالة
                 os.system(f'termux-sms-send -n {number} "{message}"')
                 print(Fore.YELLOW + f"تم إرسال الرسالة إلى: {number}")
                 time.sleep(1)  # تأخير بسيط بين الرسائل لإعطاء الوقت
@@ -46,7 +42,15 @@ def send_sms():
 # عرض واجهة المستخدم وبدء إرسال الرسائل
 def main():
     show_interface()  # عرض الواجهة
-    send_sms()        # بدء إرسال الرسائل
+    
+    # طلب إدخال مسار الملف من المستخدم
+    file_path = input(Fore.CYAN + "أدخل مسار ملف الأرقام (مثل: /sdcard/Download/data.txt): ").strip()
+    
+    # طلب إدخال الرسالة من المستخدم
+    message = input(Fore.CYAN + "أدخل نص الرسالة: ").strip()
+
+    # بدء إرسال الرسائل
+    send_sms(file_path, message)
 
 # تنفيذ السكربت
 if __name__ == "__main__":
