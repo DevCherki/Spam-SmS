@@ -9,10 +9,10 @@ init(autoreset=True)
 def show_interface():
     print(Fore.GREEN + Style.BRIGHT + '''
     *******************************************************
-    *             Spam-SMS Tool                          *
-    *         Developed by: Dev Cherki                   *
+    *             Spam-SMS Tool                           *
+    *         Developed by: Dev Cherki                    *
     *                                                     *
-    *   Contact Me:                                      *
+    *   Contact Me:                                       *
     *   Facebook: https://www.facebook.com/dev.cherki     *
     *   Instagram: https://www.instagram.com/dev_cherki   *
     *******************************************************
